@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Document Form</h1>
+    <p>Enter your First Name and Last Name:   </p>
+        <br>
+            <form action="/document_detail" method="post">
+                <input type="hidden" id="op" name="op" value="I">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_id">ID</span>
+                    <input type="text" class="form-control" name="id_document" aria-label="Sizing example input" aria-describedby="inputGroup_id">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_title">Title</span>
+                    <input type="text" class="form-control" name="title" aria-label="Sizing example input" aria-describedby="inputGroup_title">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_numberOfPages">Number of pages</span>
+                    <input type="text" class="form-control" name="number_of_pages" aria-label="Sizing example input" aria-describedby="inputGroup_numberOfPages">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_category">Category</span>
+                    <input type="text" class="form-control" name="category" aria-label="Sizing example input" aria-describedby="inputGroup_category">
+                </div>
+
+                <p><h2>Author: </h2> </p>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_category">ID</span>
+                    <input type="text" class="form-control" name="id_author" aria-label="Sizing example input" aria-describedby="inputGroup_category">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_category">Name</span>
+                    <input type="text" class="form-control" name="name_author" aria-label="Sizing example input" aria-describedby="inputGroup_category">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_category">Last name</span>
+                    <input type="text" class="form-control" name="last_name_author" aria-label="Sizing example input" aria-describedby="inputGroup_category">
+                </div>
+
+                <br >
+                <input class="btn btn-primary" type="submit" name="form" value="Submit" />
+
+            </form>
+
+</div>
+{% endblock %}

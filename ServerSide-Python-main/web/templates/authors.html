@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<h2>Authors</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Document ID</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for line in value %}
+    <tr>
+        <th scope="row">{{line[0]}}</th>
+        <td>{{line[1]}}</td>
+        <td>{{line[2]}}</td>
+        <td>{{line[3]}}</td>
+        <td>{{line[4]}}</td>
+    </tr>
+
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
